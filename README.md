@@ -5,25 +5,25 @@
 
 **Инструкция:**
 
-1) Добавьте «freeipa_auth» в настройки INSTALLED_APPS следующим образом: 
+1) Добавьте «freeipa_auth_django» в настройки INSTALLED_APPS следующим образом: 
 ```
 INSTALLED_APPS = [
     ...
-    'freeipa_auth',
+    'freeipa_auth_django',
 ]
 ```
 
-2) Добавьте «freeipa_auth.backends.FreeIpaRpcAuthBackend» в AUTHENTICATION_BACKENDS в файле настроек следующим образом: 
+2) Добавьте «freeipa_auth_django.backends.FreeIpaRpcAuthBackend» в AUTHENTICATION_BACKENDS в файле настроек следующим образом: 
 
 ```
 AUTHENTICATION_BACKENDS = [
     ...
-    'freeipa_auth.backends.FreeIpaRpcAuthBackend',
+    'freeipa_auth_django.backends.FreeIpaRpcAuthBackend',
 ]
 ```
 3) Добавьте в AUTH_USER_MODEL в файл настроек:
 ```
-AUTH_USER_MODEL = 'freeipa_auth.ScUser'
+AUTH_USER_MODEL = 'freeipa_auth_django.ScUser'
 ```
 4) Переопределите настройки в вашем файле настроек следующим образом: 
 ```
