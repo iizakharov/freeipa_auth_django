@@ -1,1 +1,0 @@
-# freeipa_auth_django
